@@ -1,0 +1,14 @@
+{% extends "postoffice/base.html" %}
+{%block content%}
+
+<div class="container border-bottom-dark pt-4">
+    <h3 class="font-weight-bold">These packages were sent out between those dates: </h3>
+</div>
+
+{% for a in pack%}
+<div>
+<h3> Package: {{a.package_ID}}</h3>
+</div>
+{%endfor%}
+
+{%endblock content%}

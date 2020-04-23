@@ -1,0 +1,22 @@
+
+
+{% extends "postoffice/base.html" %}
+{%block content%}
+
+	{% for a in my_package%}
+		
+		{% for branch in branch%}
+		{%if branch.branch_id == a.current_location_id%}
+		<h3> The location is: {{branch.address}} {{a.creation_date}}</h3>
+		
+		{%endif%}
+		{%endfor%}
+
+	
+		
+	{%endfor%}
+
+
+	
+
+{%endblock content%}

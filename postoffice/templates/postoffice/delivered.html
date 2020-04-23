@@ -1,0 +1,11 @@
+{% extends "postoffice/base.html" %}
+{%block content%}
+
+<form method = "POST"> 
+    {%csrf_token%}
+    {{ form.as_ul }} 
+    <input type = "submit" value = "Submit"> 
+</form> 
+
+{%endblock content%}
+

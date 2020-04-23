@@ -1,0 +1,26 @@
+
+{% extends "postoffice/base.html" %}
+{%block content%}
+	<div class="container pt-4 ">
+		<h2 class="text-success font-weight-bold"> Tracking number: {{item.package_ID}}</h2>
+		{% if item.delivery_status == True%}
+		<div class="container border-bottom-dark pt-4">
+			<h3 class="font-weight-bold">Your item has been delivered</h3>
+		</div>
+		{% endif%}
+		{% for a in my_package%}
+		
+		{% for branch in branch%}
+		{%if branch.branch_id == a.current_location_id%}
+		<div class="container border-bottom-dark pt-4" id="track-result">
+		<h3 class="font-weight-bold">{{a.creation_date}} </h3>
+		<h3> Arrived at: {{branch.address}} {{branch.zipcode}}</h3>
+		</div>
+		{%endif%}
+		{%endfor%}
+
+	
+		
+		{%endfor%}
+	</div>
+{%endblock content%}

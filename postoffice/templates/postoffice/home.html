@@ -1,0 +1,52 @@
+
+{% extends "postoffice/base.html" %}
+{%block content%}
+	<section></section>
+	<div class="track">
+	<div>
+		<form method="POST">
+			{%csrf_token%}
+			<fieldset>
+				
+				{{form.as_p}}
+
+				<div style="text-align: center">
+				<button type="button submit" class="btn btn-success">TRACK</button>
+				</div>	
+			</fieldset>
+
+		</form>
+		</div>
+	</div>
+
+	
+	<div class="jumbotron  jumbotron-fluid  ">
+	  <div class="container">
+	    <h1 class="display-7 text-left ml-5">Our Mission</h1>
+	    <p class="lead ml-5 ">The Post Office  provides a reliable, efficient, trusted and affordable universal delivery service that connects people and helps businesses grow</p>
+	  </div>
+	</div>
+	
+<div class="container ">
+  <div class="row text-center">
+    <div class="col">
+      <img src="https://www.idstrac.com/wp-content/uploads/usps-has-delayed-delivery-tracking-services-to-seven-countries-just-_16000961_70893_0_14102661_500-500x270.jpg">
+    </div>	
+    <div class="col text-left ml-5 mt-4 " >
+    	<h5 class="font-weight-bold text-center mr-5">Create An Account To</h5>
+      <ul class="text-left list-group list-group-flush">
+      	<li class="list-group-item col-10 ml-4">Print shipping labels</li>
+      	<li class="list-group-item col-10 ml-4">Buy stamps and shops</li>
+      	<li class="list-group-item col-10 ml-4">Request a Pickup</li>
+      	<li class="list-group-item col-10 ml-4">Enjoy our special promotion</li>	
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center  mt-3">
+  <p>The Post Office Copyright</p>  
+  
+</footer>
+
+{%endblock content%}

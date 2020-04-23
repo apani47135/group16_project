@@ -1,0 +1,13 @@
+
+
+{% extends "postoffice/base.html" %}
+{%block content%}
+	<div class="container pt-4">
+		<h3 class="font-weight-bold">Welcome to the Post Office ! You can visit us at the following locations: </h3>	
+	{% for branch in branch%}
+		<div class="container border-bottom pt-4">
+		<h3> Post Office location: {{branch.address}} {{branch.zipcode}}</h3>
+		</div>
+	{%endfor%}
+	</div>
+{%endblock content%}
